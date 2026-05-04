@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Horaires - Bain-de-Bretagne Tennis de Table{% endblock %}
+
+{% block content %}
+
+<section class="planning-section">
+    <div class="planning-intro">
+        <h2>Planning 2025-2026</h2>
+        <p>
+            Retrouvez les créneaux d'entraînement du club de tennis de table de Bain-de-Bretagne.
+        </p>
+    </div>
+
+    <div class="planning-image-container">
+        <img src="{{ url_for('static', filename='images/planning-entrainements.png') }}"
+            alt="Planning des entraînements du club de tennis de table de Bain-de-Bretagne" class="planning-image">
+    </div>
+
+    <div class="planning-note">
+        <p>
+            Pour une première séance ou une demande d'information, n'hésitez
+            pas à venir à un de nos entrainements nous vous accueillerons avec plaisir.
+        </p>
+    </div>
+</section>
+
+{% endblock %}

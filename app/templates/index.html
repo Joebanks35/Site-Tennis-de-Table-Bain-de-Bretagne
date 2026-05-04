@@ -1,8 +1,53 @@
 {% extends "base.html" %}
 
-{% block title %}Accueil - US Vern Tennis de Table{% endblock %}
+{% block title %}Accueil - Bain-de-Bretagne Tennis de Table{% endblock %}
 
 {% block content %}
-<h1>Bienvenue sur le site du club</h1>
-<p>Le projet Flask fonctionne.</p>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Bienvenue au club de tennis de table de Bain-de-Bretagne</h2>
+        <p>
+            Un club convivial ouvert aux joueuses et joueurs de tous niveaux,
+            pour pratiquer le tennis de table en loisir ou en compétition.
+        </p>
+        <a href="#" class="btn-primary">Nous contacter</a>
+    </div>
+</section>
+
+<section class="quick-info">
+    <article class="info-card">
+        <h3>Horaires</h3>
+        <p>Retrouvez les créneaux d’entraînement du club selon les publics et les niveaux.</p>
+        <a href="#">Voir les horaires</a>
+    </article>
+
+    <article class="info-card">
+        <h3>Tarifs</h3>
+        <p>Consultez les tarifs pour les licences loisir, compétition et jeunes.</p>
+        <a href="#">Voir les tarifs</a>
+    </article>
+
+    <article class="info-card">
+        <h3>Contact</h3>
+        <p>Une question sur le club ou les inscriptions ? Contactez-nous facilement.</p>
+        <a href="#">Nous écrire</a>
+    </article>
+</section>
+
+<section class="presentation">
+    <div class="presentation-text">
+        <h2>Un club local, simple et convivial</h2>
+        <p>
+            Le club de Bain-de-Bretagne Tennis de Table accueille les personnes souhaitant
+            pratiquer dans une ambiance accessible et détendue. L’objectif du site est de
+            centraliser les informations essentielles : horaires, tarifs, inscription et contact.
+        </p>
+    </div>
+
+    <div class="presentation-box">
+        <p>Photos du club à venir</p>
+    </div>
+</section>
+
 {% endblock %}

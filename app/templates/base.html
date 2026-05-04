@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}US Vern Tennis de Table{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bain-de-Bretagne Tennis de Table{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
-    {% block content %}{% endblock %}
+
+    <header class="site-header">
+        <div class="top-banner">
+            <div class="club-identity">
+                <div class="club-logo">BB</div>
+                <div>
+                    <h1>Bain-de-Bretagne Tennis de Table</h1>
+                    <p>Loisir · Compétition · Jeunes · Handisport · Convivialité</p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <a href="{{ url_for('main.home') }}">Accueil</a>
+            <a href="#">Le club</a>
+            <a href="{{ url_for('main.horaires') }}">Entrainements</a>
+            <a href="#">Tarifs</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Bain-de-Bretagne Tennis de Table - Site réalisé dans le cadre d’un stage L3 Informatique</p>
+    </footer>
+
 </body>
+
 </html>
