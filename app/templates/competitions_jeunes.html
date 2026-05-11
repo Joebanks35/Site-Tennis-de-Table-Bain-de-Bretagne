@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Compétitions adultes - Bain-de-Bretagne Tennis de Table{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+    <div class="page-hero-content">
+        <h2>Compétitions jeunes</h2>
+        <p>
+            Retrouvez les équipes jeunes engagées en championnat par équipe et accédez à leur calendrier.
+        </p>
+    </div>
+</section>
+
+<section class="teams-section">
+    <div class="section-title">
+        <h2>Phase 2 - Championnat jeunes</h2>
+        <p>
+            Sélectionnez une équipe pour consulter ses rencontres.
+        </p>
+    </div>
+
+    <div class="teams-list">
+
+        <a href="{{ url_for('main.equipe_jeunes_1') }}" class="team-row">
+            <div class="team-icon">🏓</div>
+            <div class="team-info">
+                <h3>Bain US 1</h3>
+                <p>D35_D3 - Cadets/Juniors - Phase 2 - Poule 3</p>
+            </div>
+            <div class="team-arrow">›</div>
+        </a>
+
+        <a href="{{ url_for('main.equipe_jeunes_2') }}" class="team-row">
+            <div class="team-icon">🏓</div>
+            <div class="team-info">
+                <h3>Bain US 2</h3>
+                <p>D35_D3 - Cadets/Juniors - Phase 2 - Poule 6</p>
+            </div>
+            <div class="team-arrow">›</div>
+        </a>
+    </div>
+</section>
+
+{% endblock %}

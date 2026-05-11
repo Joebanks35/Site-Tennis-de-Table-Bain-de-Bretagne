@@ -25,27 +25,28 @@
 
     <div class="competition-cards">
         <article class="competition-card">
-            <h3>Compétitions jeunes</h3>
+            <h3>Compétitions par équipe jeunes</h3>
             <p>
                 Calendrier des rencontres et compétitions destinées aux jeunes joueurs.
             </p>
-            <a href="#" class="competition-link" target="_blank">Voir le calendrier jeunes</a>
+            <a href="{{ url_for('main.competitions_jeunes') }}" class="competition-link">Voir le calendrier jeunes</a>
         </article>
 
         <article class="competition-card">
-            <h3>Compétitions adultes</h3>
+            <h3>Compétitions par équipe adultes</h3>
             <p>
                 Calendrier des rencontres par équipes adultes pour la saison en cours.
             </p>
-            <a href="#" class="competition-link" target="_blank">Voir le calendrier adultes</a>
+            <a href="{{ url_for('main.competitions_adultes') }}" class="competition-link">Voir le
+                calendrier adultes</a>
         </article>
 
         <article class="competition-card">
-            <h3>Critérium</h3>
+            <h3>Championnats individuels / Critérium fédéral</h3>
             <p>
                 Calendrier des compétitions individuelles, aussi appelées critérium.
             </p>
-            <a href="#" class="competition-link" target="_blank">Voir le calendrier critérium</a>
+            <a href="{{ url_for('main.criterium') }}" class="competition-link">Voir le calendrier critérium</a>
         </article>
     </div>
 </section>

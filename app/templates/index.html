@@ -11,27 +11,27 @@
             Un club convivial ouvert aux joueuses et joueurs de tous niveaux,
             pour pratiquer le tennis de table en loisir ou en compétition.
         </p>
-        <a href="#" class="btn-primary">Nous contacter</a>
     </div>
 </section>
 
 <section class="quick-info">
     <article class="info-card">
-        <h3>Horaires</h3>
+        <h3>Entrainements</h3>
         <p>Retrouvez les créneaux d’entraînement du club selon les publics et les niveaux.</p>
-        <a href="#">Voir les horaires</a>
+        <a href="{{ url_for('main.horaires') }}">Voir les horaires</a>
     </article>
 
     <article class="info-card">
         <h3>Tarifs</h3>
-        <p>Consultez les tarifs pour les licences loisir, compétition et jeunes.</p>
+        <p>Consultez les tarifs des licences loisir et compétition, pour les jeunes comme pour les adultes.</p>
         <a href="#">Voir les tarifs</a>
     </article>
 
     <article class="info-card">
-        <h3>Contact</h3>
-        <p>Une question sur le club ou les inscriptions ? Contactez-nous facilement.</p>
-        <a href="#">Nous écrire</a>
+        <h3>Compétitions</h3>
+        <p>Retrouvez les dates pour les compétitions par équipe jeunes ou adultes. Vous y trouverez aussi les dates des
+            compétitions individuels.</p>
+        <a href="{{ url_for('main.calendrier_competitions') }}">Voir le calendrier</a>
     </article>
 </section>
 
@@ -48,6 +48,61 @@
     <div class="presentation-box">
         <p>Photos du club à venir</p>
     </div>
+</section>
+
+<section class="join-section">
+    <div class="section-title">
+        <h2>Rejoignez le club</h2>
+        <p>
+            Que vous soyez jeune joueur, adulte débutant ou compétiteur,
+            vous avez votre place dans notre club où nous vous aiderons à progresser.
+        </p>
+    </div>
+
+    <article class="join-row">
+        <div class="join-row-text">
+            <span class="join-label">Entraînement des jeunes</span>
+            <h3>Rejoignez nos jeunes</h3>
+            <p>
+                Les jeunes peuvent découvrir le tennis de table, progresser à leur rythme
+                et participer aux entraînements dans une ambiance motivante.
+            </p>
+        </div>
+
+        <div class="join-row-image">
+            <img src="{{ url_for('static', filename='images/jeunes.jpg') }}" alt="Entraînement des jeunes">
+        </div>
+    </article>
+
+    <article class="join-row reverse">
+        <div class="join-row-image">
+            <img src="{{ url_for('static', filename='images/adultes.jpg') }}" alt="Entraînement des adultes">
+        </div>
+
+        <div class="join-row-text">
+            <span class="join-label">Entraînement des adultes</span>
+            <h3>Rejoignez nos adultes</h3>
+            <p>
+                Les adultes peuvent pratiquer en loisir ou s’entraîner plus sérieusement,
+                selon leurs envies, leur niveau et leurs objectifs.
+            </p>
+        </div>
+    </article>
+
+    <article class="join-row">
+        <div class="join-row-text">
+            <span class="join-label">Équipes en compétition</span>
+            <h3>Nos équipes en compétition</h3>
+            <p>
+                Les équipes jeunes et adultes représentent le club lors des rencontres,
+                avec un vrai esprit d’équipe et l’envie de progresser ensemble.
+            </p>
+        </div>
+
+        <div class="join-row-image">
+            <img src="{{ url_for('static', filename='images/equipes-competition.jpg') }}" alt="Équipes en compétition">
+        </div>
+    </article>
 </section>
 
 {% endblock %}
