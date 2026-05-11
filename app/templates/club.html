@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}Infos club - Bain-de-Bretagne Tennis de Table{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+    <div class="page-hero-content">
+        <h2>Infos sur le club</h2>
+        <p>
+            Découvrez l’esprit de notre club de tennis de table de Bain-de-Bretagne :
+            convivialité, entraide, loisir et compétition.
+        </p>
+    </div>
+</section>
+
+<section class="club-section">
+    <div class="club-text">
+        <h2>Un club convivial avant tout</h2>
+        <p>
+            Notre club de Bain-de-Bretagne Tennis de Table est un petit club,
+            où les nouveaux joueurs trouvent rapidement leur place. L’ambiance repose
+            sur la convivialité, l’entraide et le plaisir de jouer ensemble.
+        </p>
+        <p>
+            Que l’on vienne pour progresser, préparer les compétitions ou simplement
+            taper la balle dans une bonne ambiance, chacun peut pratiquer à son rythme.
+        </p>
+    </div>
+
+    <div class="club-image-placeholder">
+        <p>Photo du club à ajouter</p>
+    </div>
+</section>
+
+<section class="practice-section">
+    <div class="section-title">
+        <h2>Nos pratiques</h2>
+        <p>Notre club accueille différents profils de joueurs, du loisir à la compétition.</p>
+    </div>
+
+    <div class="practice-cards">
+        <article class="practice-card">
+            <h3>Loisir</h3>
+            <p>
+                Pour les joueuses et joueurs qui souhaitent pratiquer sans pression,
+                dans une ambiance détendue et accessible.
+            </p>
+        </article>
+
+        <article class="practice-card">
+            <h3>Jeunes</h3>
+            <p>
+                Les jeunes peuvent s’entraîner sérieusement afin de progresser,
+                découvrir la compétition et développer leur jeu.
+            </p>
+        </article>
+
+        <article class="practice-card">
+            <h3>Compétition</h3>
+            <p>
+                Les adultes engagés en compétition s’entraînent avec sérieux,
+                dans l’objectif de progresser collectivement et de monter en niveau.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="club-section reverse">
+    <div class="club-image">
+        <img src="{{ url_for('static', filename='images/front.jpg') }}" alt="Photo du maillot du club">
+    </div>
+
+    <div class="club-text">
+        <h2>Un esprit d’équipe fort</h2>
+        <p>
+            Notre club fonctionne avec un véritable esprit collectif. Les joueurs se
+            soutiennent, s’encouragent et se donnent à fond pour représenter le club
+            lors des rencontres.
+        </p>
+        <p>
+            Chaque compétition est aussi l’occasion de partager un moment entre coéquipiers,
+            que ce soit autour d’un match accroché
+            ou d’un repas convivial organisé après les matchs, où chacun peut se retrouver
+            autour de la table.
+        </p>
+        <p>
+            Cet esprit de groupe permet à chacun de progresser tout en gardant une
+            ambiance fraternelle et motivante. Les joueurs plus expérimentés peuvent coacher
+            naturellement les nouveaux arrivants, et chacun apporte quelque chose à
+            la vie du club, que ce soit par son niveau, son énergie ou sa bonne humeur.
+        </p>
+    </div>
+</section>
+
+<section class="staff-section">
+    <div class="section-title">
+        <h2>L’encadrement du club</h2>
+        <p>Notre club repose sur l’investissement de ses encadrants.</p>
+    </div>
+
+    <div class="staff-cards">
+        <article class="staff-card">
+            <h3>Corentin Bretaudeau</h3>
+            <p class="staff-role">Entraîneur jeunes</p>
+            <p>
+                Il accompagne les jeunes joueurs dans leur progression et leur découverte
+                du tennis de table en club.
+            </p>
+        </article>
+
+        <article class="staff-card">
+            <h3>Éric Ossieux</h3>
+            <p class="staff-role">Entraîneur adultes</p>
+            <p>
+                Il participe à l’encadrement des adultes, notamment pour les entraînements
+                orientés progression et compétition.
+            </p>
+        </article>
+
+        <article class="staff-card">
+            <h3>Nolan Marchand</h3>
+            <p class="staff-role">Président de l’association</p>
+            <p>
+                Il assure la gestion associative du club et participe à son organisation
+                au quotidien.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="club-callout">
+    <h2>Envie de rejoindre le club ?</h2>
+    <p>
+        Que vous soyez débutant, joueur loisir ou compétiteur, vous pouvez venir découvrir
+        le club et échanger avec les membres.
+    </p>
+    <a href="#" class="btn-primary">Nous contacter</a>
+</section>
+
+{% endblock %}

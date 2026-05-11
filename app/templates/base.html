@@ -14,18 +14,21 @@
     <header class="site-header">
         <div class="top-banner">
             <div class="club-identity">
-                <div class="club-logo">BB</div>
+                <div class="club-logo">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo US Bain TT">
+                </div>
                 <div>
                     <h1>Bain-de-Bretagne Tennis de Table</h1>
-                    <p>Loisir · Compétition · Jeunes · Handisport · Convivialité</p>
+                    <p>Loisir · Compétition · Jeunes · Convivialité</p>
                 </div>
             </div>
         </div>
 
         <nav class="navbar">
             <a href="{{ url_for('main.home') }}">Accueil</a>
-            <a href="#">Le club</a>
+            <a href="{{ url_for('main.club') }}">Le club</a>
             <a href="{{ url_for('main.horaires') }}">Entrainements</a>
+            <a href="{{ url_for('main.calendrier_competitions') }}">Calendrier Compétitions</a>
             <a href="#">Tarifs</a>
             <a href="#">Contact</a>
         </nav>

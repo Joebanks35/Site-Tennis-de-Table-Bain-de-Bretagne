@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Calendrier compétitions - Bain-de-Bretagne Tennis de Table{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+    <div class="page-hero-content">
+        <h2>Calendrier des compétitions</h2>
+        <p>
+            Retrouvez les liens utiles vers les calendriers des compétitions jeunes,
+            adultes et individuelles.
+        </p>
+    </div>
+</section>
+
+<section class="competition-section">
+    <div class="section-title">
+        <h2>Accéder aux calendriers</h2>
+        <p>
+            Les calendriers officiels permettent de suivre les dates des rencontres
+            et des compétitions individuelles.
+        </p>
+    </div>
+
+    <div class="competition-cards">
+        <article class="competition-card">
+            <h3>Compétitions jeunes</h3>
+            <p>
+                Calendrier des rencontres et compétitions destinées aux jeunes joueurs.
+            </p>
+            <a href="#" class="competition-link" target="_blank">Voir le calendrier jeunes</a>
+        </article>
+
+        <article class="competition-card">
+            <h3>Compétitions adultes</h3>
+            <p>
+                Calendrier des rencontres par équipes adultes pour la saison en cours.
+            </p>
+            <a href="#" class="competition-link" target="_blank">Voir le calendrier adultes</a>
+        </article>
+
+        <article class="competition-card">
+            <h3>Critérium</h3>
+            <p>
+                Calendrier des compétitions individuelles, aussi appelées critérium.
+            </p>
+            <a href="#" class="competition-link" target="_blank">Voir le calendrier critérium</a>
+        </article>
+    </div>
+</section>
+
+<section class="planning-note competition-note">
+    <p>
+        Les liens seront mis à jour selon les calendriers officiels transmis pour la saison.
+    </p>
+</section>
+
+{% endblock %}

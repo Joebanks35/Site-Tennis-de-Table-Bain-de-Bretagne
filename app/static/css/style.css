@@ -30,16 +30,18 @@ body {
 }
 
 .club-logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: white;
-    color: #173554;
+    width: 120px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 1.6rem;
+}
+
+.club-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .club-identity h1 {
@@ -208,8 +210,6 @@ body {
 }
 
 .planning-image-container {
-    background-color: white;
-    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
 }
@@ -226,6 +226,173 @@ body {
     border-left: 5px solid #173554;
     padding: 18px 22px;
     border-radius: 6px;
+}
+
+.club-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.club-section.reverse {
+    grid-template-columns: 1fr 1.4fr;
+}
+
+.club-text,
+.club-image-placeholder {
+    background-color: white;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+}
+
+.club-text h2 {
+    color: #173554;
+    font-size: 1.9rem;
+    margin-bottom: 16px;
+}
+
+.club-text p {
+    margin-bottom: 14px;
+}
+
+.club-image-placeholder {
+    border: 2px dashed #b7b7b7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    min-height: 260px;
+    text-align: center;
+}
+
+.club-image {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+}
+
+.club-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.page-hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px 20px 10px;
+}
+
+.page-hero-content h2 {
+    color: #173554;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.page-hero-content p {
+    color: #333;
+    font-size: 1.05rem;
+}
+
+.practice-section,
+.staff-section,
+.competition-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.practice-cards,
+.staff-cards,
+.competition-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.practice-card,
+.staff-card,
+.competition-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+    border-top: 5px solid #173554;
+}
+
+.practice-card h3,
+.staff-card h3,
+.competition-card h3 {
+    color: #173554;
+    margin-bottom: 12px;
+    font-size: 1.35rem;
+}
+
+.staff-role {
+    color: #d88a2d;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.club-callout {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 40px 25px;
+    background-color: #173554;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.club-callout h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.club-callout p {
+    margin-bottom: 25px;
+    color: #d8e6f5;
+}
+
+.competition-link {
+    display: inline-block;
+    margin-top: 18px;
+    background-color: #173554;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.competition-link:hover {
+    background-color: #10273f;
+}
+
+.competition-note {
+    max-width: 1100px;
+    margin-bottom: 70px;
+}
+
+@media (max-width: 800px) {
+
+    .club-section,
+    .club-section.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-cards,
+    .staff-cards,
+    .competition-cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 800px) {
