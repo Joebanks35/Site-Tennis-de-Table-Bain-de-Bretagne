@@ -57,3 +57,11 @@ def equipe_jeunes_2():
 @main.route("/calendrier-competitions/criterium")
 def criterium():
     return render_template("criterium.html")
+
+@main.route("/tarifs")
+def tarifs():
+    return render_template("tarifs.html")
+
+@main.route("/contact")
+def contact():
+    return render_template("contact.html")

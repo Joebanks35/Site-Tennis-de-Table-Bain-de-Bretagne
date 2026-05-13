@@ -150,6 +150,14 @@ body {
     text-decoration: underline;
 }
 
+.info-note {
+    margin-top: 30px;
+    padding: 20px 25px;
+    background-color: #e1ebf7;
+    border-radius: 6px;
+    text-align: center;
+}
+
 .presentation {
     max-width: 1100px;
     margin: 0 auto 70px;
@@ -222,10 +230,10 @@ body {
 
 .planning-note {
     margin-top: 25px;
-    background-color: #e8eef5;
-    border-left: 5px solid #173554;
+    background-color: #e1ebf7;
     padding: 18px 22px;
     border-radius: 6px;
+    text-align: center;
 }
 
 .club-section {
@@ -342,23 +350,25 @@ body {
 }
 
 .club-callout {
-    max-width: 900px;
-    margin: 70px auto;
-    padding: 40px 25px;
-    background-color: #173554;
-    color: white;
-    text-align: center;
+    max-width: 1060px;
+    margin: 70px auto 20px;
+    padding: 35px 40px;
+    background-color: #e1ebf7;
     border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
 }
 
 .club-callout h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    color: #173554;
+    font-size: 1.9rem;
+    margin-bottom: 18px;
 }
 
 .club-callout p {
-    margin-bottom: 25px;
-    color: #d8e6f5;
+    color: #1c1c1c;
+    max-width: 760px;
+    margin: 0 auto 25px;
 }
 
 .competition-link {
@@ -668,6 +678,253 @@ body {
 
     .criterium-item span {
         white-space: normal;
+    }
+}
+
+.tarifs-section {
+    max-width: 1100px;
+    margin: 60px auto 70px;
+    padding: 0 20px;
+}
+
+.section-intro {
+    margin-bottom: 35px;
+}
+
+.section-intro h2 {
+    color: #173554;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section-intro p {
+    color: #555;
+}
+
+.tarif-warning {
+    margin-top: 12px;
+    background-color: #fff3df;
+    color: #9a5a00;
+    padding: 12px 16px;
+    border-left: 5px solid #d88a2d;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.tarif-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.tarif-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+    border-top: 5px solid #173554;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarif-card.highlighted {
+    border-top-color: #d88a2d;
+}
+
+.tarif-card h3 {
+    color: #173554;
+    font-size: 1.35rem;
+    margin-bottom: 6px;
+}
+
+.tarif-price {
+    color: #173554;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.tarif-card p {
+    margin-bottom: 18px;
+}
+
+.tarif-card ul {
+    padding-left: 18px;
+    margin-top: auto;
+}
+
+.tarif-card li {
+    margin-bottom: 8px;
+}
+
+.inscription-section {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 30px;
+}
+
+.inscription-text,
+.inscription-file {
+    background-color: white;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+}
+
+.inscription-text h2,
+.inscription-file h3 {
+    color: #173554;
+    margin-bottom: 15px;
+}
+
+.steps {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.step span {
+    width: 34px;
+    height: 34px;
+    background-color: #173554;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.btn-disabled {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #e5e5e5;
+    color: #777;
+    padding: 11px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: not-allowed;
+}
+
+@media (max-width: 950px) {
+    .tarif-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .inscription-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .tarif-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tarif-badge {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 8px 14px;
+    background-color: #e8eef5;
+    color: #173554;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.contact-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+    border-top: 5px solid #173554;
+}
+
+.contact-card h3 {
+    color: #173554;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.contact-role {
+    color: #d88a2d;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.contact-card p {
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: inline-flex;
+    width: fit-content;
+    align-items: flex-start;
+    background-color: #e8eef5;
+    border-radius: 999px;
+    padding: 12px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contact-info span {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.contact-info strong {
+    color: #173554;
+    font-size: 1.1rem;
+}
+
+.contact-note {
+    max-width: 1060px;
+    margin: 70px auto 20px;
+    padding: 20px 25px;
+    background-color: #e1ebf7;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.contact-note h2 {
+    color: #173554;
+    font-size: 1.9rem;
+    margin-bottom: 18px;
+}
+
+.contact-note p {
+    color: #1c1c1c;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+    .contact-section {
+        grid-template-columns: 1fr;
     }
 }
 
