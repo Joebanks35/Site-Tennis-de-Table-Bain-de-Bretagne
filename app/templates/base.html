@@ -14,13 +14,21 @@
     <header class="site-header">
         <div class="top-banner">
             <div class="club-identity">
-                <div class="club-logo">
-                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo US Bain TT">
+
+                <img class="header-icon icon-left" src="{{ url_for('static', filename='images/leftIcon.png') }}"
+                    alt="Icône tennis de table">
+
+                <img class="club-logo-img" src="{{ url_for('static', filename='images/logo.png') }}"
+                    alt="Logo Bain-de-Bretagne Tennis de Table">
+
+                <div class="club-title">
+                    <h1>Bain de Bretagne Tennis de Table</h1>
+                    <p>Loisir · Compétition · Jeunes · Tournoi · Convivialité</p>
                 </div>
-                <div>
-                    <h1>Bain-de-Bretagne Tennis de Table</h1>
-                    <p>Loisir · Compétition · Jeunes · Convivialité</p>
-                </div>
+
+                <img class="header-icon icon-right" src="{{ url_for('static', filename='images/rightIcon.png') }}"
+                    alt="Icône tennis de table">
+
             </div>
         </div>
 
