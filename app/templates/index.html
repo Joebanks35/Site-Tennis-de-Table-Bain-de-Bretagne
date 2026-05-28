@@ -48,21 +48,13 @@
         </p>
     </div>
 
-    <div class="presentation-box">
-        <div class="photo-slider">
-            <button class="slider-btn prev" type="button" onclick="changeSlide(-1)">‹</button>
+    <div class="presentation-carousel">
+        <button class="carousel-btn carousel-btn-left" onclick="changeSlide(-1)">‹</button>
 
-            <img id="club-photo" src="{{ url_for('static', filename='images/club1.jpg') }}"
-                alt="Photo du club de tennis de table">
+        <img id="carousel-image" src="{{ url_for('static', filename='images/club1.jpg') }}"
+            alt="Photo du club de tennis de table">
 
-            <button class="slider-btn next" type="button" onclick="changeSlide(1)">›</button>
-        </div>
-
-        <div class="slider-dots">
-            <span class="dot active" onclick="goToSlide(0)"></span>
-            <span class="dot" onclick="goToSlide(1)"></span>
-            <span class="dot" onclick="goToSlide(2)"></span>
-        </div>
+        <button class="carousel-btn carousel-btn-right" onclick="changeSlide(1)">›</button>
     </div>
 </section>
 
