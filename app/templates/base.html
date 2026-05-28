@@ -53,7 +53,7 @@
     </footer>
 
     <script>
-        const carouselImages = [
+        const slides = [
             "{{ url_for('static', filename='images/club1.jpg') }}",
             "{{ url_for('static', filename='images/club2.jpg') }}",
             "{{ url_for('static', filename='images/club3.jpg') }}"
@@ -61,24 +61,34 @@
 
         let currentSlide = 0;
 
-        function changeSlide(direction) {
+        function updateSlide() {
             const image = document.getElementById("carousel-image");
+            const dots = document.querySelectorAll(".dot");
 
-            if (!image) {
-                return;
-            }
+            image.src = slides[currentSlide];
 
-            currentSlide = currentSlide + direction;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle("active", index === currentSlide);
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
 
             if (currentSlide < 0) {
-                currentSlide = carouselImages.length - 1;
+                currentSlide = slides.length - 1;
             }
 
-            if (currentSlide >= carouselImages.length) {
+            if (currentSlide >= slides.length) {
                 currentSlide = 0;
             }
 
-            image.src = carouselImages[currentSlide];
+            updateSlide();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide();
         }
     </script>
 
