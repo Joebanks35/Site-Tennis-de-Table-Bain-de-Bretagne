@@ -248,7 +248,7 @@ body {
     margin: 0 auto 70px;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 0.9fr 1.1fr;
     gap: 30px;
     align-items: stretch;
 }
