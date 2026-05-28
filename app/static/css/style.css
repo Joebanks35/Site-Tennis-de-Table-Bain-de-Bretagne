@@ -12,7 +12,7 @@ body {
 }
 
 .site-header {
-    background-color: #173554;
+    background-color: #03070a;
     color: white;
 }
 
@@ -26,7 +26,7 @@ body {
 }
 
 .navbar {
-    background-color: #10273f;
+    background-color: #ddd164;
     display: flex;
     justify-content: center;
     gap: 35px;
