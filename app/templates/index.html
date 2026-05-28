@@ -49,7 +49,20 @@
     </div>
 
     <div class="presentation-box">
-        <p>Photos du club à venir</p>
+        <div class="photo-slider">
+            <button class="slider-btn prev" type="button" onclick="changeSlide(-1)">‹</button>
+
+            <img id="club-photo" src="{{ url_for('static', filename='images/club1.jpg') }}"
+                alt="Photo du club de tennis de table">
+
+            <button class="slider-btn next" type="button" onclick="changeSlide(1)">›</button>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
     </div>
 </section>
 
@@ -70,10 +83,6 @@
                 Les jeunes peuvent découvrir le tennis de table, progresser à leur rythme
                 et participer aux entraînements dans une ambiance motivante.
             </p>
-        </div>
-
-        <div class="join-row-image">
-            <img src="{{ url_for('static', filename='images/jeunes.jpg') }}" alt="Entraînement des jeunes">
         </div>
     </article>
 
