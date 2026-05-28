@@ -12,8 +12,8 @@ body {
 }
 
 .site-header {
-    background-color: #03070a;
-    color: white;
+    background-color: #03080e;
+    color: rgb(247, 233, 116);
 }
 
 .club-identity h1 {
@@ -26,7 +26,7 @@ body {
 }
 
 .navbar {
-    background-color: #ddd164;
+    background-color: #10273f;
     display: flex;
     justify-content: center;
     gap: 35px;
