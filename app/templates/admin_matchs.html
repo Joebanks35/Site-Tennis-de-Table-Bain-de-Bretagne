@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Modifier les matchs{% endblock %}
+
+{% block content %}
+
+<section class="admin-section">
+    <div class="admin-card">
+        <h2>Modifier les matchs</h2>
+        <p>Sélectionnez une équipe pour modifier son calendrier.</p>
+
+        <h3>Équipes adultes</h3>
+        <div class="admin-list">
+            {% for equipe in data.adultes %}
+                <a href="{{ url_for('main.admin_modifier_equipe', categorie='adultes', equipe_id=equipe.id) }}">
+                    {{ equipe.nom }}
+                </a>
+            {% endfor %}
+        </div>
+
+        <h3>Équipes jeunes</h3>
+        <div class="admin-list">
+            {% for equipe in data.jeunes %}
+                <a href="{{ url_for('main.admin_modifier_equipe', categorie='jeunes', equipe_id=equipe.id) }}">
+                    {{ equipe.nom }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

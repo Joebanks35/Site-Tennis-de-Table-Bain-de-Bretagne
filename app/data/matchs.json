@@ -1,0 +1,41 @@
+{
+  "adultes": [
+    {
+      "id": "equipe_1",
+      "nom": "US Bain de Bretagne 1",
+      "division": "D35 - Division 2 - Phase 2 - Poule 3",
+      "matchs": [
+        {
+          "tour": "Tour n°1",
+          "date": "06/02/2026",
+          "equipe_dom": "US Bain de Bretagne 1",
+          "equipe_ext": "Iffendic 2",
+          "lieu": "domicile"
+        },
+        {
+          "tour": "Tour n°2",
+          "date": "06/03/2026",
+          "equipe_dom": "US Messac Guipry 1",
+          "equipe_ext": "US Bain de Bretagne 1",
+          "lieu": "extérieur"
+        }
+      ]
+    }
+  ],
+  "jeunes": [
+    {
+      "id": "equipe_jeunes_1",
+      "nom": "Bain US Jeunes 1",
+      "division": "Championnat jeunes - Phase en cours - Poule 3",
+      "matchs": [
+        {
+          "tour": "Tour n°1",
+          "date": "31/01/2026",
+          "equipe_dom": "Bain US (1)",
+          "equipe_ext": "Med.-Quedillac (1)",
+          "lieu": "domicile"
+        }
+      ]
+    }
+  ]
+}

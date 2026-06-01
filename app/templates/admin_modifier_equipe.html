@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Modifier une équipe{% endblock %}
+
+{% block content %}
+
+<section class="admin-section">
+    <form method="POST" class="admin-card">
+        <h2>Modifier {{ equipe.nom }}</h2>
+
+        <label>Nom de l’équipe</label>
+        <input type="text" name="nom" value="{{ equipe.nom }}">
+
+        <label>Division / poule</label>
+        <input type="text" name="division" value="{{ equipe.division }}">
+
+        <h3>Matchs</h3>
+
+        {% for match in equipe.matchs %}
+            <div class="match-edit-card">
+                <label>Tour</label>
+                <input type="text" name="tour" value="{{ match.tour }}">
+
+                <label>Date</label>
+                <input type="text" name="date" value="{{ match.date }}">
+
+                <label>Équipe à domicile</label>
+                <input type="text" name="equipe_dom" value="{{ match.equipe_dom }}">
+
+                <label>Équipe extérieure</label>
+                <input type="text" name="equipe_ext" value="{{ match.equipe_ext }}">
+
+                <label>Lieu</label>
+                <select name="lieu">
+                    <option value="domicile" {% if match.lieu == "domicile" %}selected{% endif %}>À domicile</option>
+                    <option value="extérieur" {% if match.lieu == "extérieur" %}selected{% endif %}>À l’extérieur</option>
+                    <option value="neutre" {% if match.lieu == "neutre" %}selected{% endif %}>Neutre / pas de rencontre</option>
+                </select>
+            </div>
+        {% endfor %}
+
+        <button type="submit" class="btn-primary">Enregistrer</button>
+    </form>
+</section>
+
+{% endblock %}
