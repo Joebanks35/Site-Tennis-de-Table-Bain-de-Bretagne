@@ -12,8 +12,8 @@ body {
 }
 
 .site-header {
-    background-color: #03080e;
-    color: rgb(247, 233, 116);
+    background-color: #030608;
+    color: white;
 }
 
 .club-identity h1 {
@@ -142,6 +142,7 @@ body {
     }
 
     .club-title h1 {
+        color: #f2d46b;
         font-size: 1.5rem;
         white-space: normal;
         text-align: center;
@@ -159,7 +160,7 @@ body {
 }
 
 .club-title h1 {
-    color: white;
+    color: #f2d46b;
     font-size: 2rem;
     margin-bottom: 5px;
     white-space: nowrap;
