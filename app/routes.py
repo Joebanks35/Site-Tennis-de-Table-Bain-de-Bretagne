@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request, redirect, url_for, session
 
 main = Blueprint('main', __name__)
 
@@ -65,3 +65,30 @@ def tarifs():
 @main.route("/contact")
 def contact():
     return render_template("contact.html")
+
+@main.route("/admin", methods=["GET", "POST"])
+def admin_login():
+    error = None
+
+    if request.method == "POST":
+        password = request.form.get("password")
+
+        if password == "JoePingASBTT35^^":
+            session["admin_connected"] = True
+            return redirect(url_for("main.admin_dashboard"))
+        else:
+            error = "Mot de passe incorrect."
+
+    return render_template("admin_login.html", error=error)
+
+@main.route("/admin/dashboard")
+def admin_dashboard():
+    if not session.get("admin_connected"):
+        return redirect(url_for("main.admin_login"))
+
+    return render_template("admin_dashboard.html")
+
+@main.route("/admin/logout")
+def admin_logout():
+    session.pop("admin_connected", None)
+    return redirect(url_for("main.admin_login"))
