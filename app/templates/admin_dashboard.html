@@ -10,7 +10,7 @@
         <p>Vous êtes connecté à l’espace administrateur.</p>
 
         <div class="admin-actions">
-            <a href="#">Modifier les matchs</a>
+            <a href="{{ url_for('main.admin_matchs') }}">Modifier les matchs</a>
             <a href="#">Modifier les textes</a>
             <a href="{{ url_for('main.admin_logout') }}">Se déconnecter</a>
         </div>
